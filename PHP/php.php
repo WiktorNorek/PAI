@@ -6,7 +6,8 @@
 	</head>
 	<body>
 		<?php
-		$zmi="Zmienna";
-		echo "Hello World <br> Hello World <br> Hello World <br>", $zmi ; 
+		$zmi=5;
+		if ($zmi == 0) echo "Brak wiadomości"; 
+		else echo "Masz ", $zmi, " wiadomości"; 
 		?>
 	</body>
