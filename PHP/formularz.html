@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+</head>
+<body>
+	<form>
+		<h2> Kreator postaci</h2>
+		Imie<input type="text" id="i" required, minlength="3"> <br><br>
+		Nazwisko<input type="text" id="n" required, minlength="3"> <br><br>
+		Wiek<input type="number" id="w" required, min="10"> <br><br>
+		Rasa<input list="operatory" id="o">
+        <datalist id="operatory">
+        <option value="Człowiek">
+        <option value="Elf">
+        <option value="Krasnolud">
+        <option value="Ork">
+        <option value="Halfling">
+        </datalist><br><br>
+		Tajne hasło<input type="password" id="pwd" name="pwd"><br><br>
+		Wzrost<input type="number" id="wz" required, min="100"> <br><br>
+		Waga<input type="number" id="wg" required, min="30"> <br><br>
+		Perki <br> <input type="radio" id="html" name="fav_language" value="HTML">
+			<label for="html">+1 Zwinność</label><br>
+			<input type="radio" id="css" name="fav_language" value="CSS">
+			<label for="css">+1 Siła</label><br>
+			<input type="radio" id="javascript" name="fav_language" value="JavaScript">
+			<label for="javascript">+1 Wyrzymałość</label><br><br>
+			<label for="favcolor">Główny kolor ubrań:</label>
+			<input type="color" id="favcolor" name="favcolor"><br><br>
+		<label for="birthday">Data urodzenia:</label>
+		<input type="date" id="birthday" name="birthday"><br><br>
+		Wizerunek   <input type="file" id="myfile" name="myfile"><br><br>
+		<input type="submit" onclick="alert('Postać utworzona!')" value="Potwierdź">
+		<input type="reset">
+	</form>
+</body>
+</html>
