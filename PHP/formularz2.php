@@ -17,13 +17,14 @@
         }else{
 			echo "Cześć nieznajomy.";}
 			
-            echo "Podaj hasło: ";
+			if(isset($_POST['hasło'])){
+            echo "<br>", "Zaszyfrowane hasło: ";
 			echo sha1($_POST['hasło']);
-			echo "<br><br>";
+			echo "<br><br>";}
 			if(isset($_POST['gry1']) == 'Tak'){
             echo "Hasło zostanie zapamiętanie. ";
         }else{
-			echo "Hasło nie zostanie zapamiętanie.";}
+			echo "<br>", "Hasło nie zostanie zapamiętanie.";}
         ?>
     </body>
 </html>

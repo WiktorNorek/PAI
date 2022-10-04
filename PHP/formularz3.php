@@ -28,16 +28,19 @@
         <?php
         if(isset($_POST['gry'])){
             for($i=0; $i<count($_POST['gry']); $i++){
-				echo "Wybrana rasa: ";
+				echo "<br>", "Wybrana rasa: ";
                 echo $_POST['gry'][$i] . "<br />";
             }
         }else{
-            echo "Nie wybrano klasy(";
+            echo "Nie wybrano klasy";
         }
             if(isset($_POST['plec'])){
-                if($_POST['plec'] == 'Rycerz') echo "Wybrana profesja: Rycerz";
-                elseif($_POST['plec'] == 'Mag') echo "Wybrana profesja: Mag";
-			else echo "Wybrana profesja: Złodziej"; }
+                if($_POST['plec'] == 'Rycerz') echo "Wybrana profesja: Rycerz", "<br>";
+                elseif($_POST['plec'] == 'Mag') echo "Wybrana profesja: Mag", "<br>";
+			else echo "Wybrana profesja: Złodziej", "<br>"; }
+			
+		if(isset($_POST['perk'])){
+		echo "Wybrany Perk: " . $_POST['perk'];}
         ?>
     </body>
 </html>
