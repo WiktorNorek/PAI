@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        
+        <form>
+			<legend>Podaj</legend>
+			<input type="number" id="zl"> Ile zł?<br><br>
+			<input type="number" id="miech"> Ile miesięcy?<br><br>
+            <input type="number" id="proc"> Jaki procent?<br>
+        </form>
+        <br>
+        <button onclick="display()">Wyślij</button>
+        <p id="test1"> ... </p>
+        
+        <script type="text/javascript">
+        function display() {
+			var zl = parseInt(document.getElementById('zl').value);
+			var miech = parseInt(document.getElementById('miech').value);
+			var proc = parseInt(document.getElementById('proc').value);
+			proc = (proc / 100) + 1;
+			zl = zl * proc;
+			var wynik = zl / miech;
+			
+			var wynik = wynik.toFixed(2);
+			document.getElementById("test1").textContent = "Comiesięczna opłata wynosi: " + wynik + "zł.";
+        }
+        </script>
+            
+        </script>
+    </body>
+</html>
