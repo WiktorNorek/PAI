@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+    <head>
+        <title>PAI</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+		<p id=p>Test</p>
+        <button onclick="display()">Kolor</button>
+        <button onclick="display2()">Bolt</button>
+        <button onclick="display3()">Format</button>
+        <hr>
+		<p id=pp>Test</p>
+        <button onclick="display4()">Kolor</button>
+        <button onclick="display5()">Bolt</button>
+        <button onclick="display6()">Format</button>
+        <hr>
+        <div id=aa>
+		Posiadane serwery:
+		</div>
+		<div id=bb>
+		0
+		</div>
+		<button onclick="kup()">Kup</button>
+        <button onclick="sprzedaj()">Sprzedaj</button>
+		<button onclick="kupw()">Kup wiele</button>
+		<button onclick="sprzedajw()">Sprzedaj wiele</button>
+
+        <script type="text/javascript">
+        function display() {
+			document.getElementById("p").style.color = "green";
+        }
+        function display2() {
+			document.getElementById("p").style.fontWeight = "bold";
+        }
+        function display3() {
+			document.getElementById("p").style.fontWeight = "normal";
+			document.getElementById("p").style.color = "black";
+        }
+		function display4() {
+			document.getElementById("pp").style.color = "red";}
+			
+        function display5() {
+			document.getElementById("pp").style.fontWeight = "bold";
+        }
+        function display6() {
+			document.getElementById("pp").style.fontWeight = "normal";
+				document.getElementById("pp").style.color = "black";}
+				
+		function kup() {
+		var ilosc = parseInt(document.getElementById('bb').innerHTML);
+		var wynik = 1 + ilosc;
+		document.getElementById("bb").innerHTML = wynik;
+		if (ilosc < 2){
+			document.getElementById("aa").style.color = "red";
+		}
+		else if (ilosc > 2 && ilosc < 5){
+		document.getElementById("aa").style.color = "yellow";
+		}
+		else{
+		document.getElementById("aa").style.color = "green";
+		}}
+		
+		function sprzedaj() {
+		var ilosc = parseInt(document.getElementById('bb').innerHTML);
+		var wynik = ilosc -1;
+		if (wynik < 0){
+		var wynik = wynik + 1;}
+		document.getElementById("bb").innerHTML = wynik;
+				if (ilosc < 2){
+			document.getElementById("aa").style.color = "red";
+		}
+		else if (ilosc > 2 && ilosc < 5){
+		document.getElementById("aa").style.color = "yellow";
+		}
+		else{
+		document.getElementById("aa").style.color = "green";
+		}}
+        </script>
+    </body>
+</html>
